@@ -99,7 +99,7 @@
                         <thead>
                         <tr>
                             <th>{{ __('No') }}</th>
-                            <th>{{ __('URL') }}</th>
+                            <th class="hide-on-med-down">{{ __('URL') }}</th>
                             <th>{{ __('Short URL') }}</th>
                             <th>{{ __('Date') }}</th>
                             <th>{{ __('Option') }}</th>
@@ -138,7 +138,7 @@
                         $.each(data, function (i, item) {
 
                             trHTML += '<tr><td>' + (i + 1) + '</td>';
-                            trHTML += '<td>' + item.url + '</td>';
+                            trHTML += '<td class="hide-on-med-down">' + item.url.substring(0,125) + '</td>';
                             trHTML += '<td>' + item.shorturl + '</td>';
                             trHTML += '<td>' + item.created_at + '</td>';
                             trHTML += '<td>' + '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewEditModal" data-type="view" data-url="' + item.url + '" data-shorturl="' + item.shorturl + '" data-customurl="' + item.customurl + '" data-updatedat="' + item.updated_at + '"><i class="fas fa-eye"></i></button>' +

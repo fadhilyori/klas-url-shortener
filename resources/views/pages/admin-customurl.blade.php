@@ -105,11 +105,11 @@
                     <table id="customurl-table" class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th style="width: 3%">{{ __('No') }}</th>
-                            <th style="width: 40%">{{ __('URL') }}</th>
-                            <th style="width: 20%">{{ __('Custom URL') }}</th>
-                            <th style="width: 20%">{{ __('Date') }}</th>
-                            <th style="width: 10%">{{ __('Option') }}</th>
+                            <th>{{ __('No') }}</th>
+                            <th class="hide-on-med-down">{{ __('URL') }}</th>
+                            <th>{{ __('Custom URL') }}</th>
+                            <th>{{ __('Date') }}</th>
+                            <th>{{ __('Option') }}</th>
                         </tr>
                         </thead>
                         <tbody id="tbl_body">
@@ -145,7 +145,7 @@
                         $.each(data, function (i, item) {
 
                             trHTML += '<tr><td>' + (i + 1) + '</td>';
-                            trHTML += '<td>' + item.url + '</td>';
+                            trHTML += '<td class="hide-on-med-down">' + item.url.substring(0,125) + '</td>';
                             trHTML += '<td>' + item.customurl + '</td>';
                             trHTML += '<td>' + item.created_at + '</td>';
                             trHTML += '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewEditModal" data-type="view" data-url="' + item.url + '" data-shorturl="' + item.shorturl + '" data-customurl="' + item.customurl + '" data-updatedat="' + item.updated_at + '"><i class="fas fa-eye"></i></button>';
