@@ -71,8 +71,8 @@ class AdminController extends Controller
                 $customurl .= $this->decrypt($subitem->customurl) . ',';
             }
             $obj->customurl = $customurl;
-            $obj->created_at = date("j F Y", strtotime($item->created_at));
-            $obj->updated_at = date("j F Y", strtotime($item->updated_at));
+            $obj->created_at = date("d-m-Y", strtotime($item->created_at));
+            $obj->updated_at = date("d-m-Y", strtotime($item->updated_at));
             array_push($data, $obj);
         }
         return response()->json($data, 200);
@@ -113,8 +113,8 @@ class AdminController extends Controller
                 $obj->url = $this->decrypt(ShortUrl::query()->find($item->url_id)->url);
                 $obj->shorturl = $this->decrypt(ShortUrl::query()->find($item->url_id)->shorturl);
                 $obj->customurl = $this->decrypt($item->customurl);
-                $obj->created_at = date("j F Y", strtotime($item->created_at));
-                $obj->updated_at = date("j F Y", strtotime($item->updated_at));
+                $obj->created_at = date("d-m-Y", strtotime($item->created_at));
+                $obj->updated_at = date("d-m-Y", strtotime($item->updated_at));
                 array_push($data, $obj);
         }
 
