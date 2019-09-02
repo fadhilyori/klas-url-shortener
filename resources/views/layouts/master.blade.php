@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <meta name="descriptions" content="Alat Pemendek Tautan yang dibuat dan dirawat oleh KLAS (Kelompok Linux Arek Suroboyo)."/>
+
     <link rel="icon" href="{{ asset('img/logo-32x32.png') }}" sizes="32x32">
     <title>{{ __('URL Shortener by Kelompok Linux Arek Suroboyo') }}</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -43,6 +44,15 @@
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{{--    Global site tag (gtag.js) - Google Analytics --}}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146828802-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-146828802-1');
+</script>
 @yield('jsscript')
 </body>
 </html>
